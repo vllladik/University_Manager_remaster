@@ -1,0 +1,31 @@
+﻿@model IEnumerable<University_Manager.Models.GroupViewModel>
+
+@{
+    ViewBag.Title = "GetAllGroups";
+}
+
+<h2>GetAllGroups</h2>
+<h6> @Html.ActionLink("Create-New", "AddGroup", "Group")</h6>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.ActionLink("SendRequest", "SendRequest", new { groupName = item.Name })
+            </td>
+        </tr>
+    }
+
+</table>

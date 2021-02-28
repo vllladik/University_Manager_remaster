@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="ap-bg">
+    <nav class="navbar navbar-expand-lg ad-nav">
+        @Html.ActionLink("Vlad-Tehnologi", "Index", "Home", new { area = "" }, new { @class = "navbar-brand text-white" })
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active navbar-brand">
+                    @Html.ActionLink("Requests", "Requests", null, new { @class = "nav-link text-white" })
+                </li>
+                <li class="nav-item active navbar-brand">
+                    @Html.ActionLink("Student", "GetStudent", null, new { @class = "nav-link text-white" })
+                </li>
+            </ul>
+            @Html.Partial("_LoginPartial")
+        </div>
+    </nav>
+
+    <div class="container body-content ad-size">
+        @RenderBody()
+        <hr />
+      
+        <div class="row">
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <div class="panel panel-primary text-center no-boder bg-color-green green">
+                    <div class="panel-left pull-left green">
+                        <i class="fa fa-eye fa-5x"></i>
+
+                    </div>
+                    <div class="panel-right">
+                        <h3>8,457</h3>
+                        <strong> Daily Visits</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <div class="panel panel-primary text-center no-boder bg-color-blue">
+                    <div class="panel-left pull-left blue">
+                        <i class="fa fa-shopping-cart fa-5x"></i>
+                    </div>
+
+                    <div class="panel-right">
+                        <h3>52,160 </h3>
+                        <strong> Sales</strong>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <div class="panel panel-primary text-center no-boder bg-color-red">
+                    <div class="panel-left pull-left red">
+                        <i class="fa fa fa-comments fa-5x"></i>
+
+                    </div>
+                    <div class="panel-right">
+                        <h3>15,823 </h3>
+                        <strong> Comments </strong>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <div class="panel panel-primary text-center no-boder bg-color-brown">
+                    <div class="panel-left pull-left brown">
+                        <i class="fa fa-users fa-5x"></i>
+
+                    </div>
+                    <div class="panel-right">
+                        <h3>36,752 </h3>
+                        <strong>No. of Visits</strong>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <svg height="347" version="1.1" width="371" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.5px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="32.859375" y="313" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><path fill="none" stroke="#aaaaaa" d="M45.359375,313H346" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.859375" y="241" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">50</tspan></text><path fill="none" stroke="#aaaaaa" d="M45.359375,241H346" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.859375" y="169" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">100</tspan></text><path fill="none" stroke="#aaaaaa" d="M45.359375,169H346" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.859375" y="97" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">150</tspan></text><path fill="none" stroke="#aaaaaa" d="M45.359375,97H346" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.859375" y="25" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">200</tspan></text><path fill="none" stroke="#aaaaaa" d="M45.359375,25H346" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="225.72728556270536" y="325.5" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2020</tspan></text><path fill="none" stroke="#24c2ce" d="M45.359375,183.4C52.87127451567634,149.20000000000002,67.89507354702903,53.800000000000026,75.40697306270536,46.60000000000002C82.9188725783817,39.40000000000002,97.94267160973439,121.30615595075241,105.45457112541072,125.80000000000001C112.98705118770536,130.3061559507524,128.05201131229464,70.88399452804379,135.58449137458928,82.60000000000002C143.0963908902656,94.28399452804379,158.12018992161828,203.20000000000002,165.6320894372946,219.4C173.14398895297097,235.60000000000002,188.16778798432364,223,195.6796875,212.2C203.19158701567633,201.4,218.21538604702903,151.87414500683994,225.72728556270536,133C233.259765625,114.07414500683996,248.32472574958925,53.790150478796164,255.8572058118839,61C263.3691053275602,68.19015047879617,278.3929043589129,187.00000000000003,285.9048038745892,190.60000000000002C293.4167033902656,194.20000000000002,308.44050242161825,109.60000000000002,315.9524019372946,89.80000000000001C323.464301452971,70,338.48810048432364,46.599999999999994,346,32.19999999999999" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#808080" d="M45.359375,241C52.87127451567634,199.6,67.89507354702903,93.4,75.40697306270536,75.4C82.9188725783817,57.400000000000006,97.94267160973439,98.79753761969904,105.45457112541072,97C112.98705118770536,95.19753761969903,128.05201131229464,48.38276333789328,135.58449137458928,61C143.0963908902656,73.58276333789328,158.12018992161828,182.50000000000003,165.6320894372946,197.8C173.14398895297097,213.10000000000002,188.16778798432364,187,195.6796875,183.4C203.19158701567633,179.8,218.21538604702903,180.68399452804377,225.72728556270536,169C233.259765625,157.28399452804376,248.32472574958925,86.1950752393981,255.8572058118839,89.80000000000001C263.3691053275602,93.3950752393981,278.3929043589129,196,285.9048038745892,197.8C293.4167033902656,199.60000000000002,308.44050242161825,118.60000000000002,315.9524019372946,104.20000000000002C323.464301452971,89.80000000000001,338.48810048432364,88.00000000000003,346,82.60000000000002" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="45.359375" cy="183.4" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="75.40697306270536" cy="46.60000000000002" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="105.45457112541072" cy="125.80000000000001" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="135.58449137458928" cy="82.60000000000002" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="165.6320894372946" cy="219.4" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="195.6796875" cy="212.2" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="225.72728556270536" cy="133" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="255.8572058118839" cy="61" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="285.9048038745892" cy="190.60000000000002" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="315.9524019372946" cy="89.80000000000001" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="346" cy="32.19999999999999" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="45.359375" cy="241" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="75.40697306270536" cy="75.4" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="105.45457112541072" cy="97" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="135.58449137458928" cy="61" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="165.6320894372946" cy="197.8" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="195.6796875" cy="183.4" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="225.72728556270536" cy="169" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="255.8572058118839" cy="89.80000000000001" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="285.9048038745892" cy="197.8" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="315.9524019372946" cy="104.20000000000002" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="346" cy="82.60000000000002" r="4" fill="#ffffff" stroke="#000000" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle></svg>
+            </div>
+            <div class="col" id="morris-bar-chart" style="position: relative;">
+                <svg height="437" version="1.1" width="495" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" x="32.859375" y="403" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><path style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" fill="none" stroke="#aaaaaa" d="M45.359375,403H470" stroke-width="0.5"></path><text style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" x="32.859375" y="308.5" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">25</tspan></text><path style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" fill="none" stroke="#aaaaaa" d="M45.359375,308.5H470" stroke-width="0.5"></path><text style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" x="32.859375" y="214" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">50</tspan></text><path style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" fill="none" stroke="#aaaaaa" d="M45.359375,214H470" stroke-width="0.5"></path><text style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" x="32.859375" y="119.5" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">75</tspan></text><path style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" fill="none" stroke="#aaaaaa" d="M45.359375,119.5H470" stroke-width="0.5"></path><text style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" x="32.859375" y="25" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">100</tspan></text><path style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" fill="none" stroke="#aaaaaa" d="M45.359375,25H470" stroke-width="0.5"></path><text style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" x="439.6685267857143" y="415.5" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2012</tspan></text><text style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" x="318.34263392857144" y="415.5" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2010</tspan></text><text style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" x="197.01674107142858" y="415.5" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2008</tspan></text><text style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" x="75.69084821428572" y="415.5" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2006</tspan></text><rect style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;" x="52.94224330357143" y="25" width="21.248604910714285" height="378" r="0" rx="0" ry="0" fill="#a6a6a6" stroke="none" fill-opacity="1"></rect><rect style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;" x="77.19084821428572" y="62.80000000000001" width="21.248604910714285" height="340.2" r="0" rx="0" ry="0" fill="#24c2ce" stroke="none" fill-opacity="1"></rect><rect style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;" x="113.60518973214286" y="119.5" width="21.248604910714285" height="283.5" r="0" rx="0" ry="0" fill="#a6a6a6" stroke="none" fill-opacity="1"></rect><rect style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;" x="137.85379464285714" y="157.3" width="21.248604910714285" height="245.7" r="0" rx="0" ry="0" fill="#24c2ce" stroke="none" fill-opacity="1"></rect><rect style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;" x="174.26813616071428" y="214" width="21.248604910714285" height="189" r="0" rx="0" ry="0" fill="#a6a6a6" stroke="none" fill-opacity="1"></rect><rect style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;" x="198.51674107142856" y="251.8" width="21.248604910714285" height="151.2" r="0" rx="0" ry="0" fill="#24c2ce" stroke="none" fill-opacity="1"></rect><rect style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;" x="234.9310825892857" y="119.5" width="21.248604910714285" height="283.5" r="0" rx="0" ry="0" fill="#a6a6a6" stroke="none" fill-opacity="1"></rect><rect style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;" x="259.1796875" y="157.3" width="21.248604910714285" height="245.7" r="0" rx="0" ry="0" fill="#24c2ce" stroke="none" fill-opacity="1"></rect><rect style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;" x="295.59402901785717" y="214" width="21.248604910714285" height="189" r="0" rx="0" ry="0" fill="#a6a6a6" stroke="none" fill-opacity="1"></rect><rect style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;" x="319.84263392857144" y="251.8" width="21.248604910714285" height="151.2" r="0" rx="0" ry="0" fill="#24c2ce" stroke="none" fill-opacity="1"></rect><rect style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;" x="356.2569754464286" y="119.5" width="21.248604910714285" height="283.5" r="0" rx="0" ry="0" fill="#a6a6a6" stroke="none" fill-opacity="1"></rect><rect style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;" x="380.5055803571429" y="157.3" width="21.248604910714285" height="245.7" r="0" rx="0" ry="0" fill="#24c2ce" stroke="none" fill-opacity="1"></rect><rect style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;" x="416.919921875" y="25" width="21.248604910714285" height="378" r="0" rx="0" ry="0" fill="#a6a6a6" stroke="none" fill-opacity="1"></rect><rect style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;" x="441.1685267857143" y="62.80000000000001" width="21.248604910714285" height="340.2" r="0" rx="0" ry="0" fill="#24c2ce" stroke="none" fill-opacity="1"></rect></svg><div class="morris-hover morris-default-style" style="display: none; left: 32.1908px; top: 183px;">
+                    <div class="morris-hover-row-label">2006</div><div class="morris-hover-point" style="color: #A6A6A6">
+                        Series A:
+                        100
+                    </div><div class="morris-hover-point" style="color: #24C2CE">
+                        Series B:
+                        90
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+
+        </div>
+
+        <div class="panel-body">
+            <div class="table-responsive">
+                <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline" role="grid">
+                    <div class="row"><div class="col-sm-6"><div class="dataTables_length" id="dataTables-example_length"><label><select name="dataTables-example_length" aria-controls="dataTables-example" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> records per page</label></div></div><div class="col-sm-6"><div id="dataTables-example_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" aria-controls="dataTables-example"></label></div></div></div><table class="table table-striped table-bordered table-hover dataTable no-footer" id="dataTables-example" aria-describedby="dataTables-example_info">
+                        <thead>
+                            <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column ascending" aria-sort="ascending" style="width: 111px;">Rendering engine</th><th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 165px;">Browser</th><th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 153px;">Platform(s)</th><th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 94px;">Engine version</th><th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 67px;">CSS grade</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr class="gradeA odd">
+                                <td class="sorting_1">Gecko</td>
+                                <td class=" ">Firefox 1.0</td>
+                                <td class=" ">Win 98+ / OSX.2+</td>
+                                <td class="center ">1.7</td>
+                                <td class="center ">A</td>
+                            </tr>
+                            <tr class="gradeA even">
+                                <td class="sorting_1">Gecko</td>
+                                <td class=" ">Firefox 1.5</td>
+                                <td class=" ">Win 98+ / OSX.2+</td>
+                                <td class="center ">1.8</td>
+                                <td class="center ">A</td>
+                            </tr>
+                            <tr class="gradeA odd">
+                                <td class="sorting_1">Gecko</td>
+                                <td class=" ">Firefox 2.0</td>
+                                <td class=" ">Win 98+ / OSX.2+</td>
+                                <td class="center ">1.8</td>
+                                <td class="center ">A</td>
+                            </tr>
+                            <tr class="gradeA even">
+                                <td class="sorting_1">Gecko</td>
+                                <td class=" ">Firefox 3.0</td>
+                                <td class=" ">Win 2k+ / OSX.3+</td>
+                                <td class="center ">1.9</td>
+                                <td class="center ">A</td>
+                            </tr>
+                            <tr class="gradeA odd">
+                                <td class="sorting_1">Gecko</td>
+                                <td class=" ">Camino 1.0</td>
+                                <td class=" ">OSX.2+</td>
+                                <td class="center ">1.8</td>
+                                <td class="center ">A</td>
+                            </tr>
+                            <tr class="gradeA even">
+                                <td class="sorting_1">Gecko</td>
+                                <td class=" ">Camino 1.5</td>
+                                <td class=" ">OSX.3+</td>
+                                <td class="center ">1.8</td>
+                                <td class="center ">A</td>
+                            </tr>
+                            <tr class="gradeA odd">
+                                <td class="sorting_1">Gecko</td>
+                                <td class=" ">Netscape 7.2</td>
+                                <td class=" ">Win 95+ / Mac OS 8.6-9.2</td>
+                                <td class="center ">1.7</td>
+                                <td class="center ">A</td>
+                            </tr>
+                            <tr class="gradeA even">
+                                <td class="sorting_1">Gecko</td>
+                                <td class=" ">Netscape Browser 8</td>
+                                <td class=" ">Win 98SE+</td>
+                                <td class="center ">1.7</td>
+                                <td class="center ">A</td>
+                            </tr>
+                            <tr class="gradeA odd">
+                                <td class="sorting_1">Gecko</td>
+                                <td class=" ">Netscape Navigator 9</td>
+                                <td class=" ">Win 98+ / OSX.2+</td>
+                                <td class="center ">1.8</td>
+                                <td class="center ">A</td>
+                            </tr>
+                            <tr class="gradeA even">
+                                <td class="sorting_1">Gecko</td>
+                                <td class=" ">Mozilla 1.0</td>
+                                <td class=" ">Win 95+ / OSX.1+</td>
+                                <td class="center ">1</td>
+                                <td class="center ">A</td>
+                            </tr>
+                        </tbody>
+                    </table><div class="row"><div class="col-sm-6"><div class="dataTables_info" id="dataTables-example_info" role="alert" aria-live="polite" aria-relevant="all">Showing 1 to 10 of 57 entries</div></div><div class="col-sm-6"><div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate"><ul class="pagination"><li class="paginate_button previous disabled" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_previous"><a href="#">Previous</a></li><li class="paginate_button active" aria-controls="dataTables-example" tabindex="0"><a href="#">1</a></li><li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a href="#">2</a></li><li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a href="#">3</a></li><li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a href="#">4</a></li><li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a href="#">5</a></li><li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a href="#">6</a></li><li class="paginate_button next" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_next"><a href="#">Next</a></li></ul></div></div></div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
